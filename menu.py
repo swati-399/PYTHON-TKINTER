@@ -1,0 +1,28 @@
+from tkinter import *
+def myfunc():
+    print("this is good")
+root=Tk()
+root.title("MENU")
+root.geometry("655x455")
+mymenu=Menu(root)
+mymenu.add_command(label="file",command=myfunc)
+mymenu.add_command(label="exit",command=quit)
+root.config(menu=mymenu)
+yourmenubar=Menu(root)
+m1=Menu(yourmenubar,tearoff=0)
+m1.add_command(label="New project",command=myfunc)
+m1.add_command(label="save",command=myfunc)
+m1.add_command(label="save as",command=myfunc)
+m1.add_command(label="print",command=myfunc)
+m2=Menu(yourmenubar)
+m2.add_command(label="hi")
+m2.add_command(label="hello")
+m2.add_separator()
+m2.add_command(label="tree")
+m2.add_command(label="stupid")
+
+root.config(menu=yourmenubar)
+yourmenubar.add_cascade(label="files",menu=m1)
+yourmenubar.add_cascade(label="exit",menu=m2)
+
+root.mainloop()
