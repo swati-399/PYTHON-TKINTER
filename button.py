@@ -1,0 +1,16 @@
+from tkinter import *
+root=Tk()
+root.geometry("655x455")
+def hello():
+    print("hello tkinter buttons")
+f1=Frame(root,bg="yellow",relief=SUNKEN,borderwidth=8)
+f1.pack()
+button=Button(f1,fg="pink",text="print",command=hello)
+button.pack()
+b=Button(f1,fg="pink",text="print")
+b.pack()
+b1=Button(f1,fg="pink",text="print")
+b1.pack()
+b2=Button(f1,fg="pink",text="print")
+b2.pack()
+root.mainloop()
